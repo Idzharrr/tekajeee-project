@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #4a90e2, #6ab7f9);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .header::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: #fff;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .student-name {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            margin-top: 0.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-style: italic;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9em;
+            transform: translateY(100%); /* Initially hide below the card */
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            opacity: 0; /* Initially invisible */
+        }
+        
+        .photo-card:hover .photo-caption {
+            transform: translateY(0); /* Slide into view */
+            opacity: 1; /* Fade in */
+        }
+
+        .error-img {
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="student-name">Your Full Name</h1>
+        <p class="subtitle">My Personal Gallery</p>
+    </div>
+    
+    <div class="gallery">
+        <div class="photo-card">
+            <img src="papua-dancers.jpeg" alt="Bird of Paradise">
+            <div class="photo-caption">August 15, 2025</div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="bird-of-paradise.jpeg" alt="Papua Dancers">
+            <div class="photo-caption">August 20, 2025</div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="papua-village.jpg" alt="Papua Village">
+            <div class="photo-caption">August 27, 2025</div>
+        </div>
+    </div>
+</body>
+</html>
