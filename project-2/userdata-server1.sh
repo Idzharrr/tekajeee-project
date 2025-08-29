@@ -56,7 +56,7 @@ cat << 'EOF' > /var/www/html/index.html
 
         .celebration-container {
             width: 100%;
-            height: 250px;
+            height: 150px;
             border-radius: 10px;
             border: 2px solid #ddd;
             background: linear-gradient(45deg, #4a90e2, #6ab7f9, #2c5aa0, #7cc0fa, #4a90e2);
@@ -75,18 +75,6 @@ cat << 'EOF' > /var/www/html/index.html
             100% { background-position: 0% 50%; }
         }
 
-        .trophy {
-            font-size: 4rem;
-            animation: bounce 2s ease-in-out infinite;
-            z-index: 2;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
-        }
-
         .server-text {
             margin-top: 1rem;
             padding: 0.8rem;
@@ -103,9 +91,7 @@ cat << 'EOF' > /var/www/html/index.html
 <body>
     <div class="congratulations-block">Congratulations!</div>
     <div class="photo-card">
-        <div class="celebration-container">
-            <div class="trophy">🏆</div>
-        </div>
+        <div class="celebration-container"></div>
         <div class="server-text">
             Connected to Server 1
         </div>
