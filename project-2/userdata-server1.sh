@@ -102,7 +102,6 @@ cat << 'EOF' > /var/www/html/index.html
 </head>
 <body>
     <div class="congratulations-block">Congratulations!</div>
-    <!-- Back to clean version with dark accents -->
     <div class="photo-card">
         <div class="celebration-container">
             <div class="trophy">🏆</div>
