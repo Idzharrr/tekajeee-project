@@ -56,7 +56,7 @@ cat << 'EOF' > /var/www/html/index.html
 
         .celebration-container {
             width: 100%;
-            height: 150px;
+            height: 175px;
             border-radius: 10px;
             border: 2px solid #ddd;
             background: linear-gradient(45deg, #4a90e2, #6ab7f9, #2c5aa0, #7cc0fa, #4a90e2);
